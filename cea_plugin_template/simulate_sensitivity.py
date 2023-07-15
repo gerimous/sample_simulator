@@ -175,16 +175,8 @@ def main(config):
     Run this script with the argument `--help` to get an overview of the parameters.
     """
     assert os.path.exists(config.scenario), 'Scenario not found: %s' % config.scenario
+    locator= cea.inputlocator.InputLocator(config.scenario, config.plugins)
 
-    print("Running sensitivity-demand-simulate for scenario = %s" % config.scenario)
-    print("Running sensitivity-demand-simulate with sample-index = %s" % config.sensitivity_demand.sample_index)
-    print("Running sensitivity-demand-simulate with number-of-simulations = %s" %
-          config.sensitivity_demand.number_of_simulations)
-    print("Running sensitivity-demand-simulate with samples-folder = %s" % config.sensitivity_demand.samples_folder)
-    print("Running sensitivity-demand-simulate with simulation-folder = %s" %
-          config.sensitivity_demand.simulation_folder)
-    print("Running sensitivity-demand-simulate with output-parameters = %s" %
-          config.sensitivity_demand.output_parameters)
 
     # Save output parameters
     np.save(os.path.join(config.sensitivity_demand.samples_folder, 'output_parameters.npy'),
