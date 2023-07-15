@@ -9,4 +9,4 @@ simulate-sensitivity:
                  'sensitivity-demand:samples-folder', 'sensitivity-demand:simulation-folder',
                  'sensitivity-demand:output-parameters', 'sensitivity-demand:number-of-simulations',
                  'sensitivity-demand:samples-path' , 'sensitivity-demand:simulation-path'
-                 'sensitivity-demand:sample-index', 'demand']
+                 'sensitivity-demand:sample-index', 'sensitivity-demand:batch-size', 'demand']
