@@ -1,6 +1,6 @@
 sensitivity-simulation:
 
-  - name: sensitivity-demand-simulate
+  - name: sensitivity-simulation
     label: Sensitivity Analysis simulation
     description: Simulate demand for sensitivity analysis samples
     interfaces: [cli, dashboard]
