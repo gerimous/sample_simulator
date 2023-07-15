@@ -1,10 +1,11 @@
-Demand Summary:
+sensitivity-simulation:
 
-  - name: demand-summary
-    label: Demand Summary
-    description: Creates a simple summary of the demand totals from the cea demand script.
+  - name: sensitivity-demand-simulate
+    label: Sensitivity Analysis simulation
+    description: Simulate demand for sensitivity analysis samples
     interfaces: [cli, dashboard]
-    module: cea_plugin_template.demand_summary
-    parameters: ["general:scenario", "demand-summary:fudge-factor"]
-    input-files:
-      - [get_total_demand]
+    module: cea_plugin_template.sensitivity_demand_simulate
+    parameters: ['general:scenario', 'general:multiprocessing',
+                 'sensitivity-demand:samples-folder', 'sensitivity-demand:simulation-folder',
+                 'sensitivity-demand:output-parameters', 'sensitivity-demand:number-of-simulations',
+                 'sensitivity-demand:sample-index', 'demand']
