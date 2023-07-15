@@ -1,4 +1,4 @@
-sensitivity-simulation:
+simulate-sensitivity:
 
   - name: sensitivity-simulation
     label: Sensitivity Analysis simulation
