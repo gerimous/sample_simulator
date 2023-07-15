@@ -179,29 +179,27 @@ def main(config):
 
 
     # Save output parameters
-    np.save(os.path.join(config.sensitivity_demand.samples_folder, 'output_parameters.npy'),
-            np.array(config.sensitivity_demand.output_parameters))
+    np.save(os.path.join(config.simulate_sensitivity.samples_folder, 'output_parameters.npy'),
+            np.array(config.simulate_sensitivity.output_parameters))
 
-    samples = read_samples(config.sensitivity_demand.samples_folder)
-    if config.sensitivity_demand.number_of_simulations is None:
+    samples = read_samples(config.simulate_sensitivity.samples_folder)
+    if config.simulate_sensitivity.number_of_simulations is None:
         # Simulate all remaining samples
-        config.sensitivity_demand.number_of_simulations = len(samples) - config.sensitivity_demand.sample_index
+        config.simulate_sensitivity.number_of_simulations = len(samples) - config.simulate_sensitivity.sample_index
     else:
         # Ensure batch size does not exceed number of remaining samples
-        config.sensitivity_demand.number_of_simulations = min(
-            config.sensitivity_demand.number_of_simulations,
-            len(samples) - config.sensitivity_demand.sample_index)
+        config.simulate_sensitivity.number_of_simulations = min(
+            config.simulate_sensitivity.number_of_simulations,
+            len(samples) - config.simulate_sensitivity.sample_index)
 
-    simulate_demand_batch(sample_index=config.sensitivity_demand.sample_index,
-                          batch_size=config.sensitivity_demand.number_of_simulations,
-                          samples_folder=config.sensitivity_demand.samples_folder,
+    simulate_demand_batch(sample_index=config.simulate_sensitivity.sample_index,
+                          batch_size=config.simulate_sensitivity.number_of_simulations,
+                          samples_folder=config.simulate_sensitivity.samples_folder,
                           scenario=config.scenario,
-                          simulation_folder=config.sensitivity_demand.simulation_folder,
+                          simulation_folder=config.simulate_sensitivity.simulation_folder,
                           config=config,
-                          output_parameters=config.sensitivity_demand.output_parameters)
+                          output_parameters=config.simulate_sensitivity.output_parameters)
 
 
 if __name__ == '__main__':
-    config = cea.config.Configuration()
-    config.apply_command_line_args(sys.argv[1:], ['general', 'sensitivity-demand'])
-    main(config)
+    main(cea.config.Configuration())
