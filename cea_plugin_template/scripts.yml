@@ -1,7 +1,7 @@
-Scenario Generator:
+Sample Simulator:
 
-  - name: stochastic scenario generator
-    label: Scenario Generator
+  - name: samples simulator
+    label: Sample Simulator
     description: Automates a number of parallelized simulations based on variable distributions.
     interfaces: [cli, dashboard]
     module: scenario_generator.stochastic_scenario_generator
