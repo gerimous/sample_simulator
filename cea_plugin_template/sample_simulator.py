@@ -34,7 +34,7 @@ __maintainer__ = "Luis Santos"
 __email__ = "cea@arch.ethz.ch"
 __status__ = "Production"
 
-class ScenarioPlugin(cea.plugin.CeaPlugin):
+class SimulatorPlugin(cea.plugin.CeaPlugin):
     pass
 
 #     def read_samples():
