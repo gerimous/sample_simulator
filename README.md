@@ -4,7 +4,7 @@ A template repository for create CEA plugins
 To install, clone this repo to a desired path (you would need to have `git` installed to run this command. Alternatively you can also run this command in the CEA console, which
 comes with `git` pre-installed):
 
-```git clone https://github.com/architecture-building-systems/sensitivity_simulation.git DESIRED_PATH```
+```git clone https://github.com/architecture-building-systems/sample_simulator.git DESIRED_PATH```
 
 
 Open CEA console and enter the following command to install the plugin to CEA:
@@ -16,7 +16,7 @@ Open CEA console and enter the following command to install the plugin to CEA:
 
 In the CEA console, enter the following command to enable the plugin in CEA:
 
-```cea-config write --general:plugins cea_plugin_template.simulate_sensitivity.SimulatePlugin```
+```cea-config write --general:plugins cea_plugin_template.sample_simulator.SimulatorPlugin```
 
 Now you should be able to enter the following command to run the plugin:
 
