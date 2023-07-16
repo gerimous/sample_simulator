@@ -25,14 +25,14 @@ from cea.resources.radiation.main import main
 from cea.utilities.dbf import dbf_to_dataframe, dataframe_to_dbf
 import cea.plugin
 
-__author__ = "Luis Santos"
-__copyright__ = "Copyright 2020, Architecture and Building Systems - ETH Zurich"
-__credits__ = ["Luis Santos, Jimeno Fonseca"]
+__author__ = "Moussa-Erich Geringswald"
+__copyright__ = "Copyright 2023, E3D - RWTH_Aachen"
+__credits__ = ["Moussa-Erich Geringswald"]
 __license__ = "MIT"
 __version__ = "1.0"
-__maintainer__ = "Luis Santos"
-__email__ = "cea@arch.ethz.ch"
-__status__ = "Production"
+__maintainer__ = "Moussa-Erich Geringswald"
+__email__ = ""
+__status__ = ""
 
 class SimulatorPlugin(cea.plugin.CeaPlugin):
     pass
